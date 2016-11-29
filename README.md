@@ -6,7 +6,7 @@ Created as a more permanent, responsive alternative to services like requestb.in
 Make sure you have serverless installed globally `npm install serverless -g` and setup your AWSCLI credentials. Checkout the [Serverless Docs](https://serverless.com/framework/docs/providers/aws/guide/installation/ "serverless docs") for a guide on getting up and running.
 
 Once you have Serverless configured:
-- `npm install` in main directory, <b>and in ./bot/<b>
+- `npm install` in main directory, **and in ./bot/**
 - `grunt run:babel-once` in main directory
 - `serverless deploy` in main directory
 
