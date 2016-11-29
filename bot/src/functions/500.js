@@ -7,7 +7,7 @@ const handler = (event, context, callback) => {
 
   console.log(body);
 
-  const response = { statusCode: '500' };
+  const response = { statusCode: 500 };
 
   if (_.isEmpty(constants.rejectBody)) {
     response.body = JSON.stringify({ ok: false })

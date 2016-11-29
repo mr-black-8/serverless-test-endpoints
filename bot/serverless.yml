@@ -1,4 +1,8 @@
-service: test-apig-endpoints
+service: test-apig-endpoints # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
 
 provider:
   name: aws
@@ -9,27 +13,22 @@ custom:
   defaultRegion: us-east-1
   region: ${opt:region, self:custom.defaultRegion}
   stage: ${opt:stage, self:custom.defaultStage}
-  readCapacityUnits: 1
-  writeCapacityUnits: 1
 
 package:
   exclude:
     - src/**
     - event.json
 
-plugins:
-  - serverless-offline
-
 functions:
-  200:
+  post200:
     handler: lib/functions/200.default
     events:
       - http:
-          path: 200
+          path: post200
           method: post
-  500:
+  post500:
     handler: lib/functions/500.default
     events:
       - http:
-          path: 500
+          path: post500
           method: post
