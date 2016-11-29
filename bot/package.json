@@ -1,0 +1,30 @@
+{
+  "name": "serverless-test-endpoints",
+  "version": "0.0.1",
+  "description": "Serverless project to create AWS APIG Endpoints for testing",
+  "private": false,
+  "license": "UNLICENSED",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mr-black-8/serverless-test-endpoints"
+  },
+  "author": {
+    "name": "Boz Black",
+    "email": "boz.black@gmail.com"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.0.16",
+    "dotenv": "^2.0.0",
+    "qs": "^6.3.0",
+    "underscore": "^1.8.3"
+  },
+  "homepage": "https://github.com/mr-black-8/serverless-test-endpoints",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 4.3.x"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.3.0"
+  }
+}

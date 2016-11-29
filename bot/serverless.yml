@@ -1,0 +1,35 @@
+service: test-apig-endpoints
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+custom:
+  defaultStage: dev
+  defaultRegion: us-east-1
+  region: ${opt:region, self:custom.defaultRegion}
+  stage: ${opt:stage, self:custom.defaultStage}
+  readCapacityUnits: 1
+  writeCapacityUnits: 1
+
+package:
+  exclude:
+    - src/**
+    - event.json
+
+plugins:
+  - serverless-offline
+
+functions:
+  200:
+    handler: lib/functions/200.default
+    events:
+      - http:
+          path: 200
+          method: post
+  500:
+    handler: lib/functions/500.default
+    events:
+      - http:
+          path: 500
+          method: post
