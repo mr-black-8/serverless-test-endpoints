@@ -5,6 +5,7 @@ import constants from '../constants'
 const handler = (event, context, callback) => {
   const body = process.env.IS_OFFLINE ? JSON.parse(event.body) : qs.parse(event.body);
 
+  console.log(event);
   console.log(body);
 
   const response = { statusCode: 500 };

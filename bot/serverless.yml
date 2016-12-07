@@ -20,15 +20,21 @@ package:
     - event.json
 
 functions:
-  post200:
+  res200:
     handler: lib/functions/200.default
     events:
       - http:
-          path: post200
+          path: 200/post
           method: post
-  post500:
+      - http:
+          path: 200/get
+          method: get
+  res500:
     handler: lib/functions/500.default
     events:
       - http:
-          path: post500
+          path: 500/post
           method: post
+      - http:
+          path: 500/get
+          method: get
